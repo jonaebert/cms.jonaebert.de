@@ -41,6 +41,14 @@
       "target": "api::category.category",
       "inversedBy": "articles"
     },
+    "copyright": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.copyright"
+      ],
+      "required": true,
+      "max": 1
+    },
     "blocks": {
       "type": "dynamiczone",
       "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]

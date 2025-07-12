@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_copyrights",
+  "info": {
+    "displayName": "Copyright",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "enabled": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
