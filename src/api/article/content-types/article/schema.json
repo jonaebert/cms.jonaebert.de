@@ -12,6 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "type": {
+      "type": "enumeration",
+      "required": true,
+      "default": "article",
+      "enum": [
+        "article"
+      ]
+    },
     "title": {
       "type": "string"
     },
@@ -22,12 +30,6 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
-    },
-    "cover": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": ["images", "files", "videos"]
     },
     "author": {
       "type": "relation",
@@ -41,6 +43,16 @@
       "target": "api::category.category",
       "inversedBy": "articles"
     },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
     "copyright": {
       "type": "dynamiczone",
       "components": [
@@ -51,7 +63,12 @@
     },
     "blocks": {
       "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+      "components": [
+        "shared.media",
+        "shared.quote",
+        "shared.rich-text",
+        "shared.slider"
+      ]
     }
   }
 }
