@@ -6,11 +6,16 @@
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string"
+    "name": {
+      "type": "string",
+      "required": true
     },
     "body": {
-      "type": "text"
+      "type": "text",
+      "required": true
+    },
+    "position": {
+      "type": "string"
     }
   }
 }
