@@ -24,6 +24,7 @@ export interface SharedMedia extends Struct.ComponentSchema {
   attributes: {
     file: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
+    temp_file_id: Schema.Attribute.BigInteger & Schema.Attribute.Required;
   };
 }
 

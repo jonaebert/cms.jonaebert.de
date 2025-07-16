@@ -16,6 +16,10 @@
         "videos",
         "audios"
       ]
+    },
+    "temp_file_id": {
+      "type": "biginteger",
+      "required": true
     }
   }
 }
