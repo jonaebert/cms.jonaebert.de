@@ -44,11 +44,11 @@ export interface SharedRichText extends Struct.ComponentSchema {
   collectionName: 'components_shared_rich_texts';
   info: {
     description: '';
-    displayName: 'Rich text';
-    icon: 'align-justify';
+    displayName: 'Rich Text';
+    icon: 'write';
   };
   attributes: {
-    body: Schema.Attribute.RichText;
+    body: Schema.Attribute.RichText & Schema.Attribute.Required;
   };
 }
 
