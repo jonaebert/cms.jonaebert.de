@@ -1,6 +1,6 @@
 {
   "name": "cms-jonaebert-de",
-  "version": "0.1.0",
+  "version": "5.20.0",
   "private": true,
   "description": "A Strapi application",
   "scripts": {
@@ -16,9 +16,9 @@
     "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.19.0",
-    "@strapi/plugin-users-permissions": "5.19.0",
-    "@strapi/strapi": "5.19.0",
+    "@strapi/plugin-cloud": "5.20.0",
+    "@strapi/plugin-users-permissions": "5.20.0",
+    "@strapi/strapi": "5.20.0",
     "fs-extra": "^10.0.0",
     "mime-types": "^2.1.27",
     "pg": "8.8.0",
