@@ -415,7 +415,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String;
-    type: Schema.Attribute.Enumeration<['article']> &
+    type: Schema.Attribute.Enumeration<['article', 'comment']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'article'>;
     updatedAt: Schema.Attribute.DateTime;

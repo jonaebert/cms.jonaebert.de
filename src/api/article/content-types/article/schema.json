@@ -17,7 +17,8 @@
       "required": true,
       "default": "article",
       "enum": [
-        "article"
+        "article",
+        "comment"
       ]
     },
     "title": {
