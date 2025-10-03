@@ -4,5 +4,5 @@ export default ({ env }) => ({
   app: {
     keys: env.array('APP_KEYS'),
   },
-  proxy: env('PROXY'),
+  proxy: true,
 });
