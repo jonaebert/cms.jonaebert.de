@@ -19,7 +19,7 @@ export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
     displayName: 'Media';
-    icon: 'file-video';
+    icon: 'picture';
   };
   attributes: {
     file: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
@@ -31,7 +31,7 @@ export interface SharedQuote extends Struct.ComponentSchema {
   collectionName: 'components_shared_quotes';
   info: {
     displayName: 'Quote';
-    icon: 'indent';
+    icon: 'quote';
   };
   attributes: {
     body: Schema.Attribute.Text & Schema.Attribute.Required;
@@ -72,7 +72,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
   info: {
     description: '';
     displayName: 'Slider';
-    icon: 'address-book';
+    icon: 'picture';
   };
   attributes: {
     files: Schema.Attribute.Media<'images', true>;
@@ -83,10 +83,10 @@ export interface SharedText extends Struct.ComponentSchema {
   collectionName: 'components_shared_texts';
   info: {
     displayName: 'Text';
-    icon: 'write';
+    icon: 'feather';
   };
   attributes: {
-    text: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    body: Schema.Attribute.Blocks & Schema.Attribute.Required;
   };
 }
 

@@ -2,11 +2,11 @@
   "collectionName": "components_shared_texts",
   "info": {
     "displayName": "Text",
-    "icon": "write"
+    "icon": "feather"
   },
   "options": {},
   "attributes": {
-    "text": {
+    "body": {
       "type": "blocks",
       "required": true
     }
