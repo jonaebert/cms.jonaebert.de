@@ -19,11 +19,11 @@
       "type": "string",
       "required": true
     },
-    "startdatetime": {
+    "startAt": {
       "type": "datetime",
       "required": true
     },
-    "enddatetime": {
+    "endAt": {
       "type": "datetime",
       "required": true
     }
