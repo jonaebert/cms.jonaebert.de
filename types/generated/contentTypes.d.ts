@@ -451,7 +451,8 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
         'shared.slider',
         'shared.text',
       ]
-    >;
+    > &
+      Schema.Attribute.Required;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
     copyright: Schema.Attribute.DynamicZone<['shared.copyright']> &
       Schema.Attribute.Required &
@@ -461,7 +462,8 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
         },
         number
       >;
-    cover: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    cover: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
+      Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -477,7 +479,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     type: Schema.Attribute.Enumeration<['article', 'comment']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'article'>;
@@ -545,6 +547,37 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTickerTicker extends Struct.CollectionTypeSchema {
+  collectionName: 'tickers';
+  info: {
+    displayName: 'Ticker';
+    pluralName: 'tickers';
+    singularName: 'ticker';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    enddatetime: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ticker.ticker'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    startdatetime: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1104,6 +1137,7 @@ declare module '@strapi/strapi' {
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
+      'api::ticker.ticker': ApiTickerTicker;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
