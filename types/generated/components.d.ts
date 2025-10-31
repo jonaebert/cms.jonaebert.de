@@ -40,18 +40,6 @@ export interface SharedQuote extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedRichText extends Struct.ComponentSchema {
-  collectionName: 'components_shared_rich_texts';
-  info: {
-    description: '';
-    displayName: 'Rich Text';
-    icon: 'write';
-  };
-  attributes: {
-    body: Schema.Attribute.RichText & Schema.Attribute.Required;
-  };
-}
-
 export interface SharedSeo extends Struct.ComponentSchema {
   collectionName: 'components_shared_seos';
   info: {
@@ -96,7 +84,6 @@ declare module '@strapi/strapi' {
       'shared.copyright': SharedCopyright;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
-      'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'shared.text': SharedText;
