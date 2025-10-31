@@ -26,6 +26,25 @@
     "endAt": {
       "type": "datetime",
       "required": true
+    },
+    "preWord": {
+      "type": "enumeration",
+      "required": true,
+      "default": "zum",
+      "enum": [
+        "zum",
+        "zur"
+      ]
+    },
+    "nowWord": {
+      "type": "enumeration",
+      "required": true,
+      "default": "der",
+      "enum": [
+        "der",
+        "die",
+        "das"
+      ]
     }
   }
 }

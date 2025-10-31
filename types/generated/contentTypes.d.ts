@@ -574,6 +574,12 @@ export interface ApiTickerTicker extends Struct.CollectionTypeSchema {
       'api::ticker.ticker'
     > &
       Schema.Attribute.Private;
+    nowWord: Schema.Attribute.Enumeration<['der', 'die', 'das']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'der'>;
+    preWord: Schema.Attribute.Enumeration<['zum', 'zur']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'zum'>;
     publishedAt: Schema.Attribute.DateTime;
     startAt: Schema.Attribute.DateTime & Schema.Attribute.Required;
     text: Schema.Attribute.String & Schema.Attribute.Required;
