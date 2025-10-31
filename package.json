@@ -1,6 +1,6 @@
 {
   "name": "cms-jonaebert-de",
-  "version": "5.20.0",
+  "version": "5.30.0",
   "private": true,
   "description": "A Strapi application",
   "scripts": {
@@ -25,7 +25,6 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
-    "strapi-plugin-publisher": "^2.0.4",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
