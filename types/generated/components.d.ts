@@ -10,8 +10,8 @@ export interface SharedCopyright extends Struct.ComponentSchema {
     enabled: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<false>;
-    name: Schema.Attribute.String;
-    url: Schema.Attribute.String;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -22,6 +22,7 @@ export interface SharedMedia extends Struct.ComponentSchema {
     icon: 'picture';
   };
   attributes: {
+    copyright: Schema.Attribute.Component<'shared.copyright', false>;
     file: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
   };
@@ -63,6 +64,8 @@ export interface SharedSlider extends Struct.ComponentSchema {
     icon: 'picture';
   };
   attributes: {
+    copyright: Schema.Attribute.Component<'shared.copyright', true> &
+      Schema.Attribute.Required;
     files: Schema.Attribute.Media<'images', true>;
   };
 }

@@ -12,10 +12,32 @@
       "default": false
     },
     "name": {
-      "type": "string"
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enabled"
+            },
+            true
+          ]
+        }
+      },
+      "required": true
     },
     "url": {
-      "type": "string"
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enabled"
+            },
+            true
+          ]
+        }
+      },
+      "required": true
     }
   },
   "config": {}

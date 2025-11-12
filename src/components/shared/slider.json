@@ -14,6 +14,12 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "copyright": {
+      "type": "component",
+      "component": "shared.copyright",
+      "repeatable": true,
+      "required": true
     }
   }
 }
