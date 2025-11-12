@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uid": {
+      "type": "uid",
+      "required": true
+    },
+    "subject": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "location": {
+      "type": "string"
+    },
+    "datetype": {
+      "type": "enumeration",
+      "required": true,
+      "default": "date-time",
+      "enum": [
+        "date-time"
+      ]
+    },
+    "start": {
+      "type": "datetime",
+      "required": true
+    },
+    "end": {
+      "type": "datetime",
+      "required": true
+    },
+    "state": {
+      "type": "enumeration",
+      "required": true,
+      "default": "confirmed",
+      "enum": [
+        "confirmed",
+        "tentative",
+        "canceled"
+      ]
+    }
+  }
+}
