@@ -25,9 +25,13 @@
     "location": {
       "type": "string"
     },
+    "externalEventURL": {
+      "type": "string",
+      "regex": "^https:\\/\\/([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,}(:\\d+)?(\\/[^\\s?#]*)?(\\?[^\\s#]*)?(#[^\\s]*)?$"
+    },
     "datetype": {
       "type": "enumeration",
-      "required": true,
+      "required": false,
       "default": "date-time",
       "enum": [
         "date-time"
@@ -35,21 +39,30 @@
     },
     "start": {
       "type": "datetime",
-      "required": true
+      "required": false
     },
     "end": {
       "type": "datetime",
-      "required": true
+      "required": false
     },
     "state": {
       "type": "enumeration",
-      "required": true,
+      "required": false,
       "default": "confirmed",
       "enum": [
         "confirmed",
         "tentative",
-        "canceled"
+        "cancelled"
       ]
+    },
+    "lastModifiedICS": {
+      "type": "datetime",
+      "required": false
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.media",
+      "repeatable": false
     }
   }
 }
