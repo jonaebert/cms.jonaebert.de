@@ -568,21 +568,23 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     datetype: Schema.Attribute.Enumeration<['date-time']> &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'date-time'>;
     description: Schema.Attribute.Text;
-    end: Schema.Attribute.DateTime;
+    end: Schema.Attribute.DateTime & Schema.Attribute.Required;
     externalEventURL: Schema.Attribute.String;
     image: Schema.Attribute.Component<'shared.media', false>;
-    lastModifiedICS: Schema.Attribute.DateTime;
+    lastModifiedICS: Schema.Attribute.DateTime & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::event.event'> &
       Schema.Attribute.Private;
     location: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    start: Schema.Attribute.DateTime;
+    start: Schema.Attribute.DateTime & Schema.Attribute.Required;
     state: Schema.Attribute.Enumeration<
       ['confirmed', 'tentative', 'cancelled']
     > &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'confirmed'>;
     subject: Schema.Attribute.String & Schema.Attribute.Required;
     uid: Schema.Attribute.UID & Schema.Attribute.Required;

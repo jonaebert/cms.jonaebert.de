@@ -31,7 +31,7 @@
     },
     "datetype": {
       "type": "enumeration",
-      "required": false,
+      "required": true,
       "default": "date-time",
       "enum": [
         "date-time"
@@ -39,15 +39,15 @@
     },
     "start": {
       "type": "datetime",
-      "required": false
+      "required": true
     },
     "end": {
       "type": "datetime",
-      "required": false
+      "required": true
     },
     "state": {
       "type": "enumeration",
-      "required": false,
+      "required": true,
       "default": "confirmed",
       "enum": [
         "confirmed",
@@ -57,7 +57,7 @@
     },
     "lastModifiedICS": {
       "type": "datetime",
-      "required": false
+      "required": true
     },
     "image": {
       "type": "component",
