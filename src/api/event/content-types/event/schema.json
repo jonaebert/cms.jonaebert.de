@@ -61,8 +61,15 @@
       "required": true
     },
     "cover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "copyright": {
       "type": "component",
-      "component": "shared.media",
+      "component": "shared.copyright",
       "repeatable": false
     }
   }
