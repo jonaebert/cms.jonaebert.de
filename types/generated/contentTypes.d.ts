@@ -564,6 +564,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    cover: Schema.Attribute.Component<'shared.media', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -573,7 +574,6 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     description: Schema.Attribute.Text;
     end: Schema.Attribute.DateTime & Schema.Attribute.Required;
     externalEventURL: Schema.Attribute.String;
-    image: Schema.Attribute.Component<'shared.media', false>;
     lastModifiedICS: Schema.Attribute.DateTime & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::event.event'> &

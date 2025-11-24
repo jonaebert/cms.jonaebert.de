@@ -59,7 +59,7 @@
       "type": "datetime",
       "required": true
     },
-    "image": {
+    "cover": {
       "type": "component",
       "component": "shared.media",
       "repeatable": false
