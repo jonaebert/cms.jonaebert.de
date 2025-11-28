@@ -71,6 +71,11 @@
       "type": "component",
       "component": "shared.copyright",
       "repeatable": false
+    },
+    "checksum": {
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }
