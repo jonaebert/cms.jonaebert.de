@@ -521,6 +521,36 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiBraunschweig2031Braunschweig2031
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'braunschweig_2031s';
+  info: {
+    displayName: 'Braunschweig 2031';
+    pluralName: 'braunschweig-2031s';
+    singularName: 'braunschweig-2031';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::braunschweig-2031.braunschweig-2031'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+    uid: Schema.Attribute.UID<'Title'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   collectionName: 'categories';
   info: {
@@ -1147,6 +1177,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
+      'api::braunschweig-2031.braunschweig-2031': ApiBraunschweig2031Braunschweig2031;
       'api::category.category': ApiCategoryCategory;
       'api::event.event': ApiEventEvent;
       'api::ticker.ticker': ApiTickerTicker;

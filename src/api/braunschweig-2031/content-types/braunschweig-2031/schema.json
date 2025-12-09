@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "braunschweig_2031s",
+  "info": {
+    "singularName": "braunschweig-2031",
+    "pluralName": "braunschweig-2031s",
+    "displayName": "Braunschweig 2031"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uid": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
