@@ -10,8 +10,8 @@ export interface SharedCopyright extends Struct.ComponentSchema {
     enabled: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<false>;
-    name: Schema.Attribute.String & Schema.Attribute.Required;
-    url: Schema.Attribute.String & Schema.Attribute.Required;
+    name: Schema.Attribute.String;
+    url: Schema.Attribute.String;
   };
 }
 
