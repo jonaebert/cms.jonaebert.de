@@ -27,7 +27,7 @@
     },
     "description": {
       "type": "text",
-      "maxLength": 80
+      "minLength": 120
     },
     "slug": {
       "type": "uid",
@@ -56,12 +56,10 @@
       ]
     },
     "copyright": {
-      "type": "dynamiczone",
-      "components": [
-        "shared.copyright"
-      ],
-      "required": true,
-      "max": 1
+      "type": "component",
+      "component": "shared.copyright",
+      "repeatable": false,
+      "required": true
     },
     "blocks": {
       "type": "dynamiczone",
