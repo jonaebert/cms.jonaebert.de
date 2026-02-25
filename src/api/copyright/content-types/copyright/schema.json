@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "copyrights",
+  "info": {
+    "singularName": "copyright",
+    "pluralName": "copyrights",
+    "displayName": "Copyright"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "enabled": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "label": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enabled"
+            },
+            true
+          ]
+        }
+      }
+    },
+    "url": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "enabled"
+            },
+            true
+          ]
+        }
+      }
+    }
+  }
+}
